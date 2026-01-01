@@ -18,9 +18,12 @@ const Profile = () => {
   const fetchUserProfile = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`${USER_API_END_POINT}/get-profile`, {
-        withCredentials: true,
-      });
+      const { data } = await axios.get(
+        `https://applicaton-tracker.vercel.app/api/v1/user/get-profile`,
+        {
+          withCredentials: true,
+        }
+      );
 
       if (data.success) {
         setUser(data.user);
