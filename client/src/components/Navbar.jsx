@@ -12,7 +12,7 @@ const Navbar = () => {
   const logOutHandler = async (e) => {
     try {
       const { data } = await axios.get(
-        `https://applicaton-tracker.vercel.app/logout`,
+        `https://applicaton-tracker.vercel.app/api/v1/user/logout`,
         {
           withCredentials: true,
         }

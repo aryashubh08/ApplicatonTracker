@@ -29,7 +29,7 @@ const Card = ({ card }) => {
   const deleteHandler = async (id) => {
     try {
       const { data } = await axios.delete(
-        `https://applicaton-tracker.vercel.app/delete/${id}`,
+        `https://applicaton-tracker.vercel.app/api/v1/applicattion/delete/${id}`,
         { withCredentials: true }
       );
       if (data.success) {

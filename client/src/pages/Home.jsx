@@ -13,7 +13,7 @@ const Home = () => {
   const getAllApplication = async () => {
     try {
       const { data } = await axios.get(
-        `https://applicaton-tracker.vercel.app/get`,
+        `https://applicaton-tracker.vercel.app/api/v1/application/get`,
         {
           withCredentials: true,
         }

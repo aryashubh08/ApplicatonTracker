@@ -50,7 +50,7 @@ const Signup = () => {
       dispatch(setLoading(true));
 
       const { data } = await axios.post(
-        `https://applicaton-tracker.vercel.app/register`,
+        `https://applicaton-tracker.vercel.app/api/v1/user/register`,
         formData,
         {
           headers: {

@@ -11,7 +11,7 @@ const Dashboard = () => {
   const { stats } = useSelector((state) => state.app);
   const getDashboardData = async () => {
     const { data } = await axios.get(
-      `https://applicaton-tracker.vercel.app/dashboard`,
+      `https://applicaton-tracker.vercel.app/api/v1/application/dashboard`,
       {
         withCredentials: true,
       }

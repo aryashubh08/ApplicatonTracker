@@ -30,7 +30,7 @@ const Login = () => {
       dispatch(setLoading(true));
 
       const response = await axios.post(
-        `https://applicaton-tracker.vercel.app/login`,
+        `https://applicaton-tracker.vercel.app/api/v1/user/login`,
         input,
         {
           headers: {
