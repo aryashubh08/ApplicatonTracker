@@ -21,7 +21,7 @@ const ApplicationsTable = ({ refetch, applications }) => {
   const deleteHandler = async (applicationId) => {
     try {
       const { data } = await axios.delete(
-        `https://applicaton-tracker.vercel.app/api/v1/application/delete/${applicationId}`,
+        `${APPLICATION_API_END_POINT}/delete/${applicationId}`,
         { withCredentials: true }
       );
 

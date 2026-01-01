@@ -18,12 +18,9 @@ const Profile = () => {
   const fetchUserProfile = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(
-        `https://applicaton-tracker.vercel.app/api/v1/user/get-profile`,
-        {
-          withCredentials: true,
-        }
-      );
+      const { data } = await axios.get(`${USER_API_END_POINT}/get-profile`, {
+        withCredentials: true,
+      });
 
       if (data.success) {
         setUser(data.user);
@@ -55,7 +52,7 @@ const Profile = () => {
             .filter(Boolean);
 
       const { data } = await axios.post(
-        `https://applicaton-tracker.vercel.app/api/v1/user/update-profile`,
+        `${USER_API_END_POINT}/update-profile`,
         { skills: skillsArray },
         { withCredentials: true }
       );

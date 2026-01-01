@@ -12,12 +12,9 @@ const Home = () => {
   console.log(allApplications);
   const getAllApplication = async () => {
     try {
-      const { data } = await axios.get(
-        `https://applicaton-tracker.vercel.app/api/v1/application/get`,
-        {
-          withCredentials: true,
-        }
-      );
+      const { data } = await axios.get(`${APPLICATION_API_END_POINT}/get`, {
+        withCredentials: true,
+      });
       if (data.success) {
         dispatch(setAllApplications(data.applications));
         // console.log("Applications fetched:", data.applications);

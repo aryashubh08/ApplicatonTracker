@@ -29,7 +29,7 @@ const Edit = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        `https://applicaton-tracker.vercel.app/api/v1/application/update/${id}`,
+        `${APPLICATION_API_END_POINT}/update/${id}`,
         input,
         {
           headers: {

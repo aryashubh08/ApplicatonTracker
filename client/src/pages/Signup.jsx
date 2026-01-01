@@ -50,7 +50,7 @@ const Signup = () => {
       dispatch(setLoading(true));
 
       const { data } = await axios.post(
-        `https://applicaton-tracker.vercel.app/api/v1/user/register`,
+        `${USER_API_END_POINT}/register`,
         formData,
         {
           headers: {
@@ -97,6 +97,7 @@ const Signup = () => {
             value={input.firstName}
             onChange={changeHandler}
             className="w-full border px-3 py-2 rounded"
+            z
             required
           />
         </div>

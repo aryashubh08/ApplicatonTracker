@@ -32,7 +32,7 @@ const Application = () => {
     try {
       dispatch(setLoading(true));
       const { data } = await axios.post(
-        `https://applicaton-tracker.vercel.app/api/v1/application/create`,
+        `${APPLICATION_API_END_POINT}/create`,
         input,
         { withCredentials: true }
       );
