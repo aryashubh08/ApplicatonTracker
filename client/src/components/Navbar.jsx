@@ -11,9 +11,12 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const logOutHandler = async (e) => {
     try {
-      const { data } = await axios.get(`${USER_API_END_POINT}/logout`, {
-        withCredentials: true,
-      });
+      const { data } = await axios.get(
+        `https://applicaton-tracker.vercel.app/logout`,
+        {
+          withCredentials: true,
+        }
+      );
       if (data.success) {
         dispatch(setUser(null));
         localStorage.removeItem("user");

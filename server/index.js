@@ -17,7 +17,7 @@ db.connect();
 // ✅ CORS FIX (IMPORTANT)
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend URL
+    origin: "https://applicaton-tracker-yld7.vercel.app/", // frontend URL
     credentials: true, // allow cookies
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   })

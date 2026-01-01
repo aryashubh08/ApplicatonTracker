@@ -10,9 +10,12 @@ const Dashboard = () => {
   const { allApplications } = useSelector((state) => state.app);
   const { stats } = useSelector((state) => state.app);
   const getDashboardData = async () => {
-    const { data } = await axios.get(`${APPLICATION_API_END_POINT}/dashboard`, {
-      withCredentials: true,
-    });
+    const { data } = await axios.get(
+      `https://applicaton-tracker.vercel.app/dashboard`,
+      {
+        withCredentials: true,
+      }
+    );
 
     if (data.success) {
       dispatch(setAllApplications(data.applications));

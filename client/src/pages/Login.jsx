@@ -29,12 +29,16 @@ const Login = () => {
     try {
       dispatch(setLoading(true));
 
-      const response = await axios.post(`${USER_API_END_POINT}/login`, input, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        withCredentials: true,
-      });
+      const response = await axios.post(
+        `https://applicaton-tracker.vercel.app/login`,
+        input,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
 
       const { data } = response;
 

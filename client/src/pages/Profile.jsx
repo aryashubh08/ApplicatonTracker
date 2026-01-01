@@ -52,7 +52,7 @@ const Profile = () => {
             .filter(Boolean);
 
       const { data } = await axios.post(
-        `${USER_API_END_POINT}/update-profile`,
+        `https://applicaton-tracker.vercel.app/update-profile`,
         { skills: skillsArray },
         { withCredentials: true }
       );
